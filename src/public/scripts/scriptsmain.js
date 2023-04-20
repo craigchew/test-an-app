@@ -7,7 +7,7 @@ forms.addEventListener("submit", (en) => {
   if (searchbar.value === "") {
     return;
   } else {
-    fetch(`http://localhost:3000/weather?country=${searchbar.value}`)
+    fetch(`https://test-chewhong12.b4a.run/weather?country=${searchbar.value}`)
       .then((response) => {
         console.log(response);
         if(response.ok){

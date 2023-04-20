@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const exd = require("hbs");
 const path = require("path");
 const port = 3000;
@@ -12,7 +13,10 @@ app.set("view engine", "hbs");
 app.set("views", _viewFolder);
 exd.registerPartials(_partialFolder);
 app.use(express.static(_publicFolder));
-
+app.use(cors({
+  origin: '*',
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.get("", (req, res) => {
   res.redirect("/home");
 });
