@@ -2,7 +2,7 @@
   "name": "new_project",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "src/script.js",
   "scripts": {
     "start": "node src/script.js"
   },
